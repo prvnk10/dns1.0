@@ -2,20 +2,23 @@
  <div class="list-group f_p_nav_links">
 
    <a href='faculty_profile.php' class="col-sm-8 list-group-item active"> Home </a>
-   <a href='faculty_profile.php?u=' class="col-sm-8 list-group-item"> Timetable </a>
+<!--    <a href='faculty_profile.php?u=' class="col-sm-8 list-group-item"> Timetable </a>  -->
+<!--   <a href='faculty_profile.php?u=20' class="col-sm-8 list-group-item"> Noticeboard </a>  -->
    <a href='faculty_profile.php?u=4' class="col-sm-8 list-group-item"> Roll Sheet </a>
    <a href='faculty_profile.php?u=5' class="col-sm-8 list-group-item"> Message </a>
-   <a href='faculty_profile.php?u=6' class="col-sm-8 list-group-item"> Marks </a>
-   <a href="faculty_profile.php?u=7" class="col-sm-8 list-group-item"> <span class="glyphicon glyphicon-upload"></span> Upload Study Material </a>
-   <a href="faculty_profile.php?u=8" class="col-sm-8 list-group-item"> Upload Assignments </a>
+<!--    <a href='faculty_profile.php?u=6' class="col-sm-8 list-group-item"> Marks </a>  -->
+<!--   <a href="faculty_profile.php?u=7" class="col-sm-8 list-group-item"> <span class="glyphicon glyphicon-upload"></span> Upload Study Material </a>  -->
+<!--   <a href="faculty_profile.php?u=8" class="col-sm-8 list-group-item"> Upload Assignments </a> -->
    <!--  <a href="#assignments_content" class="col-sm-8 list-group-item" data-toggle="collapse"> Upload Assignments </a> -->
    <div id="assignments_content" class="collapse text-left"> <div> <li class="list-group-item"> f </li> <li> h </li> </ul> </div> </div>
-   <a href="faculty_profile.php?u=9" class="col-sm-8 list-group-item"> Upcoming events </a>
-   <a href="faculty_profile.php?u=10" class="col-sm-8 list-group-item"> Feedback </a>
+<!--   <a href="faculty_profile.php?u=9" class="col-sm-8 list-group-item"> Upcoming events </a>  -->
+<!--   <a href="faculty_profile.php?u=10" class="col-sm-8 list-group-item"> Feedback </a>  -->
    <a href='faculty_profile.php?u=13' class="col-sm-8 list-group-item"> <span class="glyphicon glyphicon-search"></span> Search  </a>
-   <a href="faculty_profile.php?u=11" class="col-sm-8 list-group-item"> Assign assignments </a>
+<!--   <a href="faculty_profile.php?u=11" class="col-sm-8 list-group-item"> Assign assignments </a>  -->
    <a href="faculty_profile.php?u=14" class="col-sm-8 list-group-item"> Suggestion Box </a>
-   <a href="faculty_profile.php?u=12" class="col-sm-8 list-group-item"> Edit Profile </a>
+   <a href="faculty_profile.php?u=24" class="col-sm-8 list-group-item"> Software Feedback </a>
+   <a href="faculty_profile.php?u=12" class="col-sm-8 list-group-item"> Change Password </a>
+<!--  <a href='faculty_profile.php?u=99' class="col-sm-8 list-group-item"> Upload Profile Pic. </a>  -->
    <a href='logout.php' class="col-sm-8 list-group-item"> Logout </a>
 
  </div>
@@ -43,7 +46,7 @@ switch ($id) {
      break;
 
      case 5:
-      require_once('message.php');
+      require_once('faculty/message.php');
       break;
 
      case 6:
@@ -71,7 +74,7 @@ switch ($id) {
       break;
 
      case 12:
-      require_once('change_password.php');
+      require_once('require/edit_profile.php');
       break;
 
      case 13:
@@ -81,6 +84,14 @@ switch ($id) {
       case 14:
         require_once('require/suggestion.php');
         break;
+
+      case 24:
+        require_once('require/software_feedback.php');
+        break;
+
+      case 99:
+       require_once('require/upload.php');
+       break;
 
     default:
       echo "Here we will show the latest news related to faculty department";
