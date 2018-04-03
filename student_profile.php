@@ -14,10 +14,13 @@ else
 
   require_once('student/s_p_navigation.php');
 
+  require_once('require/get_user_info.php');
+
+  # echo var_dump($_SESSION);
+
   require_once('require/footer.php');
 }
 
-
- ?>
+?>
 
  <script src='script/s_profile.js'></script>

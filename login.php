@@ -1,3 +1,5 @@
+<div id="content">
+
 <?php
 // include the connection file
 require_once('require/connection.php');
@@ -100,3 +102,5 @@ if($show_form){
 require_once('require/footer.php');
 
 ?>
+
+</div>
