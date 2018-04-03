@@ -14,6 +14,11 @@ if($_SESSION['user_category'] != 'student')
   header("Refresh: 5; url=index.php" );
 }
 
+echo "<p class='alert alert-info alert-dismissible'>";
+echo "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+echo "data till the last semester results";
+echo "</p>";
+
 // grab the rollno from session variable
 $rollno = $_SESSION['username'];
 

@@ -16,10 +16,11 @@ $user_category = $_SESSION['user_category'];
 
 # grab student's roll no from session
 $username = $_SESSION['username'];
+# echo var_dump($_SESSION);
 $current_sem = $_SESSION['current_sem'];
 # $section = $_SESSION['section'];
-$programme_id = $_SESSION['programme_id'];
-$department_id = $_SESSION['department_id'];
+$programme_id = $_SESSION['p_id'];
+$department_id = $_SESSION['d_id'];
 
 # query to grab the course_code, subject from courses table ; faculty_id from course_faculty table and faculty name from faculty table
 
@@ -47,6 +48,7 @@ if($q_result->num_rows > 0)
    }
 
    echo "</select>";
+   echo "<div id='subject_info'></div>";
    echo "</div>";
 
 }

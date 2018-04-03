@@ -3,5 +3,4 @@
 
 <?php require_once('student/subject_list.php'); ?>
 
-
- </div>
+</div>
