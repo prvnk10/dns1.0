@@ -10,7 +10,7 @@
    <select class="form-control" id="t" name="type">
     <option value="students"> Student </option>
     <option value="faculty"> Faculty </option>
-    <option value="administration"> Administration </option>
+    <!-- <option value="administration"> Administration </option>  -->
     <option value="workers"> Workers </option>
    </select>
   </div>

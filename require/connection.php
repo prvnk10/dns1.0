@@ -10,8 +10,10 @@ define("username", "root");
 define("password", "");
 define("db_name", "digital_nit");
 
+define("profile_pics_path" , "uploads/pics");
+
 /*
-define("path" , "uploads/");
+
 define("events_path", "uploads/events/");
 define("academic", "administration/academic/");
 define("study_m", "uploads/study_material/");

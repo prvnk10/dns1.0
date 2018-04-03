@@ -30,11 +30,24 @@ if($s_query_processing->num_rows > 0)
      echo "<tr> <td> <a class='search_results' id='" . $row['username'] . "' href='require/get_details.php?username=" . $row['username'] . "'> " . $row['name'] . " </a>";
      echo "<input type='hidden'> </td> </tr>";
      echo '<br />';
+
+     /*
+     echo "<div class='card' style='width:400px'>";
+     echo "<div class='card-body'>";
+      echo "<h4 class='card-title'>" . $row['name'] .  "</h4>";
+      # echo "<p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+      echo "<a href='#' class='btn btn-primary'>See Profile </a>";
+    echo "</div>";
+    echo "<img class='card-img-bottom' src='img_avatar6.png' alt='Card image' style='width:100%'>";
+    echo "</div>";
+    */
+
    }
 
 }
-else {
- echo 'No match found';
+else
+{
+ echo "<p class='alert alert-danger'> No match found </p>";
 }
 
 }
