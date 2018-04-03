@@ -1,37 +1,53 @@
+/*
+
+$('#suggestion_msg').on('input', function(){
+  console.log('ekuchand chia wala');
+});
+
+*/
+
 $('#suggestion_form').on('submit', function(e){
   e.preventDefault();
 
-  console.log(124350);
-
   var details = $('#suggestion_form').serialize();
+  // console.log(details);
 
   var msg = $('#suggestion_msg').val();
+  // console.log(msg);
 
   if(msg.length > 0)
   {
-    // console.log("bangu");
-
     /*
     $.post('require/submit_suggestion.php', details, function(data){
       $('#inner_div').html(data);
     });
+
     */
 
+    var url = "require/submit_suggestion.php?" + details;
+
+    var main_div = $('#inner_div');
+
+
     $.ajax({
-      url: 'require/submit_suggestion.php';
+      url: url,
       type: "POST",
       timeout: 3000,
 
       beforeSend: function(){
-         $('#content').after('<div id="loading"> Subitting your suggestion </div>');
+         main_div.after('<div id="loading" class="alert alert-info"> Submitting your suggestion </div>');
       },
 
       success: function(data){
-        $('#content').html(data);
+        main_div.html(data);
       },
 
       complete: function(){
         $('#loading').remove();
+      },
+
+      failure: function(){
+       main_div.html('<div id="loading_failed" class="alert alert-danger"> Please try after some time </div>');
       }
 
     });
@@ -40,7 +56,7 @@ $('#suggestion_form').on('submit', function(e){
 
   else
   {
-    console.log('chawal');
+    $('#content').html("Please input the suggestion.");
   }
 
 });

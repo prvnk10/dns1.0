@@ -1,3 +1,4 @@
+/*
 $('#courses_list').on('blur change', function(e){
   e.preventDefault();
   // console.log(230);
@@ -8,32 +9,8 @@ $('#courses_list').on('blur change', function(e){
   var user_file = $('#user_file').val();
   // console.log(user_file);
 
-  // get the selected files from the input
-  var files = user_file.files;
-  console.log(files);
-
-  var formData = new FormData($('#user_file').get(1));
-  console.log(formData);
-
-  /* Loop through each of the selected files.
-  for (var i = 0; i < files.length; i++)
-  {
-    var file = files[i];
-
-    // Check the file type.
-    if (!file.type.match('pdf.*')) {
-      continue;
-    }
-
-    // Add the file to the request.
-    formData.append('photos[]', file, file.name);
-
-  }
-  */
-
   var $showContent = $('#showContent');
 
-/*
   if(course_code != '' && user_file != '')
   {
     var details = $('upload_study_material_form').serialize();
@@ -67,11 +44,12 @@ $('#courses_list').on('blur change', function(e){
   });
 
 
-}  */
+}
 
 
 
 });
+*/
 
 $('#upload_study_material_form').on('submit', function(e){
 
@@ -79,10 +57,6 @@ $('#upload_study_material_form').on('submit', function(e){
 
   var course_code = $('#courses_list').val();
   var user_file = $('#user_file').val();
-
-  // get the selected files from the input
-  var files = user_file.files;
-  console.log(files);
 
   var $showContent = $('#showContent');
 
